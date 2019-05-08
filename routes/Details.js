@@ -24,7 +24,7 @@ router.post('/', function(req, res, next) {
     });
   });
   
-  /* UPDATE BOOK */
+  
   router.put('/:id', function(req, res, next) {
     details.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
       if (err) return next(err);
@@ -32,7 +32,7 @@ router.post('/', function(req, res, next) {
     });
   });
   
-  /* DELETE BOOK */
+ 
   router.delete('/:id', function(req, res, next) {
     details.findByIdAndRemove(req.params.id, req.body, function (err, post) {
       if (err) return next(err);
