@@ -1,0 +1,48 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+    overflow: auto;
+  }
+  
+  .isbn-col {
+    flex: 0 0 100px !important;
+    white-space: unset !important;
+  }
+  
+  .button-row {
+    margin: 10px 0;
+    position:absolute;
+    left:25%;
+    top:1%;
+  }
+  .mat-column-ID{
+
+    color:white;
+  }
+  
+  
+  .mat-column-Name{
+    text-indent: 10px;
+    color:white;
+  }
+  
+  .mat-column-address{
+    text-indent: 10px;
+    color:white;
+  }
+  
+  .mat-column-MobileNumber{
+    text-indent: 10px;
+    color:white;
+  }
+  .mat-table{
+    BORDER-COLOR:black;
+     }
+     .full-width-table {
+      width: 50%;
+      position:absolute;
+      left:25%;
+ }
+ 

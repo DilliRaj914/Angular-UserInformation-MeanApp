@@ -1,0 +1,49 @@
+<div class="button-row">
+    <a mat-raised-button color="primary" (click)="userDetails()"><mat-icon>show</mat-icon></a>
+  </div>
+  
+  <form [formGroup]="usersdetailsForm" (ngSubmit)="onFormSubmit(usersdetailsForm.value)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID" formControlName="ID"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!usersdetailsForm.get('ID').valid && usersdetailsForm.get('ID').touched">Please enter ID</span>
+      </mat-error>
+    </mat-form-field>
+  
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" formControlName="Name"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!usersdetailsForm.get('Name').valid && usersdetailsForm.get('Name').touched">Please enter Name</span>
+      </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="MobileNumber" formControlName="MobileNumber"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!usersdetailsForm.get('MobileNumber').valid && usersdetailsForm.get('MobileNumber').touched">Please enter  MobileNumber</span>
+      </mat-error>
+    </mat-form-field>
+  
+  
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="address" formControlName="address"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!usersdetailsForm.get('address').valid && usersdetailsForm.get('address').touched">Please enter address</span>
+      </mat-error>
+    </mat-form-field>
+
+    
+    
+    <div class="button-row">
+      <button type="submit" [disabled]="!usersdetailsForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+    </div>
+  </form>
+  

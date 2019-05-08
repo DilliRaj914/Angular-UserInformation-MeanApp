@@ -1,0 +1,57 @@
+
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/users']"><mat-icon>list</mat-icon></a>
+</div>
+<h1  class="header">ENTER THE DETAILS!!</h1>
+
+  <form  class="full-width-table" [formGroup]="userdetailsForm" (ngSubmit)="onFormSubmit(userdetailsForm.value)">
+  
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput placeholder="ID" formControlName="ID"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!userdetailsForm.get('ID').valid && userdetailsForm.get('ID').touched">Please enter ID</span>
+      </mat-error>
+    </mat-form-field>
+   
+   
+    <mat-form-field class="example-full-width"appearance="outline">
+      <input matInput placeholder="Name" formControlName="Name"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!userdetailsForm.get('Name').valid && userdetailsForm.get('Name').touched">Please enter Name</span>
+      </mat-error>
+    </mat-form-field>
+  
+    
+  
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput placeholder="MobileNumber" formControlName="MobileNumber"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!userdetailsForm.get('MobileNumber').valid && userdetailsForm.get('MobileNumber').touched">Please enter MobileNumber</span>
+      </mat-error>
+    </mat-form-field>
+
+
+
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput placeholder="address" formControlName="address"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!userdetailsForm.get('address').valid && userdetailsForm.get('address').touched">Please enter address</span>
+      </mat-error>
+    </mat-form-field>
+  
+
+
+
+    <button type="submit" [disabled]="!userdetailsForm.valid" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+  </form>
+
+     
+ 
+
+
+

@@ -1,0 +1,45 @@
+
+<div class="button-row">
+  <a mat-raised-button  color="primary" [routerLink]="['/usercreate']">Add</a> 
+</div>
+  
+<h2 style="text-align: center">USER INFORMATION</h2>
+
+<div class="example-container">
+  <table border="1"  style="align-content:center;background-color:rgb(117, 145, 197);"  class="full-width-table" mat-table #table [dataSource]="dataSource">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef> <h3>ID</h3> </th>
+      <td mat-cell *matCellDef="let element" class="ID-col"> {{element.ID}} </td>
+    </ng-container>
+
+    <!-- FirstName Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef><h3>NAME</h3>  </th>
+      <td mat-cell *matCellDef="let element">{{element.Name}}  </td>
+    </ng-container>
+
+    
+     <!-- MobileNumber Column -->
+     <ng-container matColumnDef="MobileNumber">
+      <th mat-header-cell *matHeaderCellDef><h3>MOBILE NUMBER</h3>  </th>
+      <td mat-cell *matCellDef="let element"> {{element.MobileNumber}} </td>
+    </ng-container>
+
+
+    <!-- LastName Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef><h3>ADDRESS</h3>  </th>
+      <td mat-cell *matCellDef="let element">{{element.address}} </td>
+    </ng-container>
+
+    
+     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/userdetail', row._id]"></tr>
+   
+  </table>
+</div>
+
+
+

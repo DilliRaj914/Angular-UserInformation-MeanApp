@@ -1,0 +1,12 @@
+.example-card{
+    width:40%;
+   position:absolute;
+   left:30%;
+   top:20%;
+}
+.button-row {
+    margin: 10px 0;
+    position:absolute;
+    left:30%;
+    top:15%;
+  }
